@@ -42,13 +42,13 @@ int partition(int arr[], int low, int high)
             swap(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[start], &arr[j]);
+    swap(&arr[low], &arr[j]);
     return j;
 }
 
 void quickSort(int arr[], int low, int high)
 {
-    if (start < end)
+    if (low < high)
     {
         int pIndex = partition(arr, low, high);
         quickSort(arr, low, pIndex - 1);
