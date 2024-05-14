@@ -22,14 +22,14 @@ void printArray(int arr[], int n)
     printf("\n");
 }
 
-int partition(int arr[], int start, int end)
+int partition(int arr[], int low, int high)
 {
-    int pivot = arr[start];
-    int i = start, j = end;
+    int pivot = arr[low];
+    int i = low, j = high;
 
     while (i < j)
     {
-        while (arr[i] <= pivot && i < end)
+        while (arr[i] <= pivot && i < high)
         {
             i++;
         }
@@ -46,13 +46,13 @@ int partition(int arr[], int start, int end)
     return j;
 }
 
-void quickSort(int arr[], int start, int end)
+void quickSort(int arr[], int low, int high)
 {
     if (start < end)
     {
-        int pIndex = partition(arr, start, end);
-        quickSort(arr, start, pIndex - 1);
-        quickSort(arr, pIndex + 1, end);
+        int pIndex = partition(arr, low, high);
+        quickSort(arr, low, pIndex - 1);
+        quickSort(arr, pIndex + 1, high);
     }
 }
 
