@@ -20,8 +20,10 @@ void bruteForceStringMatch(char *text, char *pattern) {
         // If the pattern was found, print the position
         if (j == patternLength) {
             printf("Pattern found at index %d\n", i);
+            return;
         }
     }
+    printf("Pattern not found\n");
 }
 
 int main() {
