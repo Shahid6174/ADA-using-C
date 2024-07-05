@@ -1,3 +1,5 @@
+//Lab Program
+
 #include <stdio.h>
 
 #define INF 999
